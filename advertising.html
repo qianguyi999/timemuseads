@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advertising & Marketing | TimeMuse - Heritage Commerce Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1A1A1A', // 墨黑 - 主文字色
+                        ochre: '#C17A54', // 赭石红 - 主色
+                        stone: '#5B8A8D', // 石青蓝 - 辅助色
+                        gold: '#D4AF37', // 淡金 - 点缀色
+                        rice: '#F8F5F0', // 宣纸白 - 背景色
+                        cloud: '#E8E4DB', // 云灰 - 次要背景
+                    },
+                    fontFamily: {
+                        brush: ['Ma Shan Zheng', 'cursive'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .rice-paper {
+                background-color: #F8F5F0;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-divider {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #1A1A1A, transparent);
+            }
+            .cloud-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-5 0-8 3-10 6-2-3-5-6-10-6-6 0-10 4-10 10s4 10 10 10c1 0 2 0 3-1 2 4 6 7 11 7s9-3 11-7c1 1 2 1 3 1 6 0 10-4 10-10s-4-10-10-10z' fill='%23C17A54' fill-opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-card {
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid rgba(26, 26, 26, 0.1);
+                backdrop-filter: blur(10px);
+            }
+            .brush-title {
+                letter-spacing: 0.05em;
+                line-height: 1.2;
+            }
+            .hover-lift {
+                transition: all 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+            }
+        }
+    </style>
+    <!-- 引入毛笔书法字体和优雅衬线字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-ink antialiased rice-paper">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-20 md:pt-28 md:pb-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- 顶部Logo -->
+                <div class="mb-12">
+                    <a href="index.html">
+                        <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-14 mx-auto">
+                    </a>
+                </div>
+                
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Our Services</span>
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-brush brush-title text-ink mb-6">
+                    Advertising & Marketing
+                </h1>
+                
+                <div class="ink-divider w-24 mx-auto mb-6"></div>
+                
+                <p class="text-lg md:text-xl text-ink/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Tell the authentic stories behind heritage crafts and build emotional connections with discerning audiences nationwide
+                </p>
+                
+                <a href="#contact" class="inline-block bg-ochre hover:bg-ochre/90 text-white px-8 py-3 rounded-sm font-medium text-lg transition-all text-center">
+                    Discuss Your Project
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/160/600/500" alt="Heritage Brand Marketing" class="rounded-sm shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Overview</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Cultural Storytelling That Resonates</h2>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        Traditional crafts carry centuries of cultural wisdom, but many struggle to connect with modern audiences. At TimeMuse, we specialize in translating the language of heritage into compelling marketing narratives that resonate with today's consumers.
+                    </p>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        Our team understands both the cultural significance of traditional crafts and the dynamics of modern marketing. We help heritage brands and artisans tell their authentic stories in ways that build emotional connections, drive engagement, and increase sales.
+                    </p>
+                    <p class="text-lg text-ink/70 leading-relaxed">
+                        From artisan profile development to full-scale cultural campaigns, we provide comprehensive marketing solutions tailored exclusively for the heritage and craft industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Marketing Services -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">What We Offer</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Marketing Solutions</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    Comprehensive marketing services designed specifically for heritage brands and master artisans
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-book text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Heritage Brand Storytelling</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Craft authentic narratives that highlight the cultural significance, craftsmanship, and history behind your heritage products.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Brand origin story development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Craft technique documentation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Artisan biography writing</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Brand voice and tone guidelines</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-user-circle text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Artisan IP Development</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Build personal brands for master artisans, turning them into cultural influencers and trusted authorities in their craft.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Artisan personal branding</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Social media profile optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Content strategy for artisans</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Media interview preparation</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-video-camera text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Content Creation & Production</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        High-quality visual and written content that showcases the beauty and intricacy of traditional crafts.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Professional product photography</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Craft process videography</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Short video content production</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Blog and article writing</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-bullhorn text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Cultural Campaign Management</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Full-scale marketing campaigns that celebrate cultural heritage and drive brand awareness and sales.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Campaign strategy and planning</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Festival and holiday campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Influencer collaboration</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>PR and media outreach</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Marketing Advantage -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Heritage Marketing Experts</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    What makes our marketing services uniquely suited for the heritage industry
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Advantage 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-graduation-cap text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Cultural Expertise</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        Our team includes cultural heritage specialists who understand the historical and cultural significance of traditional crafts
+                    </p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-line-chart text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Market Insight</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        Deep understanding of the luxury heritage market and consumer preferences for authentic cultural products
+                    </p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-heart text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Authentic Approach</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        We never sensationalize or appropriate culture—our marketing always respects and honors the traditions we represent
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketing Process -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">How We Work</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Marketing Process</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    A structured 5-step process to ensure your marketing success
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Discovery</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Learn about your brand, craft, and goals through in-depth consultation
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Strategy</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Develop a customized marketing strategy tailored to your unique needs
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Creation</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Produce high-quality content and marketing materials that tell your story
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Execution</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Launch and manage your marketing campaigns across all channels
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        5
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Optimization</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Analyze results and optimize campaigns for maximum performance
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Success Stories</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Marketing Success Stories</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    See how our marketing services have helped heritage brands connect with audiences
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Case 1 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/628/650/350" alt="Traditional Silver Craft Marketing" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Brand Storytelling</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Traditional Silver Craft Revival</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Developed a comprehensive brand storytelling strategy for a traditional silver craft workshop in southwestern China. We created a series of short videos documenting the intricate crafting process and the artisan's personal journey, which resonated strongly with younger audiences.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">+72% Brand Awareness</span>
+                            <span class="text-ink/60">12 Months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 2 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/42/650/350" alt="Cultural Influencer Campaign" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Social Media Campaign</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Artisan Influencer Program</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Launched an artisan influencer program for a heritage textile brand. We helped three master artisans build their personal brands on social media, creating authentic content that showcased their skills and daily lives, resulting in significant engagement and sales growth.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">+45% Repeat Customers</span>
+                            <span class="text-ink/60">9 Months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 md:py-28 bg-stone text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold mb-6">Ready to Tell Your Heritage Story?</h2>
+            <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Contact us today to discuss how we can help you connect with audiences and grow your heritage brand
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <!-- Phone -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-phone text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Phone</p>
+                        <a href="tel:+8615100288381" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fa fa-whatsapp text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">WhatsApp</p>
+                        <a href="https://wa.me/8615100288381" target="_blank" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Email</p>
+                        <a href="mailto:bella@qianguyi.com" class="text-lg font-medium hover:text-ochre transition-colors">bella@qianguyi.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="index.html">
+                            <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-10 mr-3 brightness-200">
+                        </a>
+                    </div>
+                    <p class="text-white/60 mb-6 leading-relaxed">
+                        Empowering heritage commerce. Connecting master artisans with discerning audiences through ethical business practices and cultural respect.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/60 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-white/60 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-white/60 hover:text-white transition-colors">All Services</a></li>
+                        <li><a href="index.html#cases" class="text-white/60 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#contact" class="text-white/60 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="advertising.html" class="text-white hover:text-white transition-colors">Advertising & Marketing</a></li>
+                        <li><a href="online-advertising.html" class="text-white/60 hover:text-white transition-colors">Online Advertising</a></li>
+                        <li><a href="business-info.html" class="text-white/60 hover:text-white transition-colors">Business Intelligence</a></li>
+                        <li><a href="exhibitions.html" class="text-white/60 hover:text-white transition-colors">Exhibition Organization</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mr-3 mt-1 text-ochre"></i>
+                            <span class="text-white/60">Building D, High-tech Industrial Park, Baoding, China</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-whatsapp mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-3 text-ochre"></i>
+                            <span class="text-white/60">bella@qianguyi.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40">
+                <p>&copy; 2024 TimeMuse. All rights reserved. Preserving cultural heritage through ethical commerce.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8615100288381" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fa fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

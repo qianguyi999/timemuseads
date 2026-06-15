@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Intelligence | TimeMuse - Heritage Commerce Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1A1A1A', // 墨黑 - 主文字色
+                        ochre: '#C17A54', // 赭石红 - 主色
+                        stone: '#5B8A8D', // 石青蓝 - 辅助色
+                        gold: '#D4AF37', // 淡金 - 点缀色
+                        rice: '#F8F5F0', // 宣纸白 - 背景色
+                        cloud: '#E8E4DB', // 云灰 - 次要背景
+                    },
+                    fontFamily: {
+                        brush: ['Ma Shan Zheng', 'cursive'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .rice-paper {
+                background-color: #F8F5F0;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-divider {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #1A1A1A, transparent);
+            }
+            .cloud-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-5 0-8 3-10 6-2-3-5-6-10-6-6 0-10 4-10 10s4 10 10 10c1 0 2 0 3-1 2 4 6 7 11 7s9-3 11-7c1 1 2 1 3 1 6 0 10-4 10-10s-4-10-10-10z' fill='%23C17A54' fill-opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-card {
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid rgba(26, 26, 26, 0.1);
+                backdrop-filter: blur(10px);
+            }
+            .brush-title {
+                letter-spacing: 0.05em;
+                line-height: 1.2;
+            }
+            .hover-lift {
+                transition: all 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+            }
+        }
+    </style>
+    <!-- 引入毛笔书法字体和优雅衬线字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-ink antialiased rice-paper">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-20 md:pt-28 md:pb-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- 顶部Logo -->
+                <div class="mb-12">
+                    <a href="index.html">
+                        <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-14 mx-auto">
+                    </a>
+                </div>
+                
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Our Services</span>
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-brush brush-title text-ink mb-6">
+                    Business Intelligence
+                </h1>
+                
+                <div class="ink-divider w-24 mx-auto mb-6"></div>
+                
+                <p class="text-lg md:text-xl text-ink/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Exclusive market insights and data intelligence for the heritage and craft industry to drive informed business decisions
+                </p>
+                
+                <a href="#contact" class="inline-block bg-ochre hover:bg-ochre/90 text-white px-8 py-3 rounded-sm font-medium text-lg transition-all text-center">
+                    Request a Sample Report
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/201/600/500" alt="Heritage Market Research" class="rounded-sm shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Overview</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Data-Driven Heritage Commerce</h2>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        The heritage industry is rapidly evolving, but reliable market data and industry insights are often difficult to find. Many artisans and heritage brands make business decisions based on intuition rather than hard data, leading to missed opportunities and unnecessary risks.
+                    </p>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        TimeMuse's business intelligence services fill this critical gap. We collect, analyze, and interpret data from across the heritage industry, providing actionable insights that help businesses understand market trends, identify opportunities, and make informed decisions.
+                    </p>
+                    <p class="text-lg text-ink/70 leading-relaxed">
+                        From comprehensive market reports to verified artisan directories, our intelligence services are designed exclusively for the unique needs of the heritage and craft industry.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Intelligence Services -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">What We Offer</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Intelligence Solutions</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    Comprehensive market intelligence services tailored specifically for heritage brands and industry stakeholders
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-file-text-o text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Heritage Market Reports</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Comprehensive research reports covering market size, growth trends, consumer behavior, and competitive landscape for various heritage craft categories.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Annual industry outlook reports</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Category-specific market analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Regional market assessments</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Competitor analysis reports</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-line-chart text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Consumer Trend Analysis</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Deep insights into consumer preferences, purchasing behavior, and emerging trends in the heritage and luxury craft market.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Consumer demographic analysis</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Purchasing behavior studies</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Emerging trend forecasting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Price sensitivity analysis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-users text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Verified Artisan Directory</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Access to our exclusive database of verified master artisans and craft communities across China, with detailed profiles and capabilities.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Verified artisan profiles</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Craft technique classification</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Production capacity information</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Contact and collaboration details</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-gavel text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Regulatory Compliance</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Up-to-date information on regulations, certifications, and legal requirements affecting the heritage and craft industry.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Regulatory updates and alerts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Certification requirements</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Intellectual property guidance</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Industry standards information</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Intelligence Advantage -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Heritage Industry Experts</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    What makes our business intelligence services uniquely valuable for the heritage industry
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Advantage 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-database text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Exclusive Data</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        Access to unique data sources and insights that are not available through general market research firms
+                    </p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-eye text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Industry Focus</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        100% focused on the heritage and craft industry, giving us deep understanding and specialized expertise
+                    </p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-lightbulb-o text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Actionable Insights</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        We don't just provide data—we translate it into practical recommendations that drive business results
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intelligence Process -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">How We Work</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Research Process</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    A rigorous 5-step research methodology to ensure accurate, reliable, and actionable intelligence
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Planning</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Define research objectives and methodology based on your specific needs
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Collection</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Gather data from primary and secondary sources across the industry
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Analysis</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Analyze data using advanced statistical and qualitative methods
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Validation</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Verify findings with industry experts and cross-reference sources
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        5
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Delivery</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Present findings and actionable recommendations in a clear, concise format
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Success Stories</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Intelligence Success Stories</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    See how our business intelligence has helped heritage organizations make better decisions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Case 1 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/628/650/350" alt="Ceramic Industry Market Analysis" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Market Research</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Traditional Ceramic Industry Revitalization</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Conducted a comprehensive market analysis for a traditional ceramic production region in central China. Our research identified emerging market trends and consumer preferences, helping local artisans adapt their product offerings and pricing strategies to better meet market demand.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">+40% Regional Sales</span>
+                            <span class="text-ink/60">12 Months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 2 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/42/650/350" alt="Artisan Directory Project" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Industry Database</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Craft Industry Supply Chain Optimization</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Developed a specialized artisan directory for a major heritage retail brand. Our verified database helped the company streamline its supply chain, reduce sourcing time by 60%, and discover new artisan partners across multiple regions.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">-60% Sourcing Time</span>
+                            <span class="text-ink/60">6 Months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 md:py-28 bg-stone text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold mb-6">Ready to Make Data-Driven Decisions?</h2>
+            <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Contact us today to learn more about our business intelligence services and request a free sample report
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <!-- Phone -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-phone text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Phone</p>
+                        <a href="tel:+8615100288381" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fa fa-whatsapp text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">WhatsApp</p>
+                        <a href="https://wa.me/8615100288381" target="_blank" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Email</p>
+                        <a href="mailto:bella@qianguyi.com" class="text-lg font-medium hover:text-ochre transition-colors">bella@qianguyi.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="index.html">
+                            <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-10 mr-3 brightness-200">
+                        </a>
+                    </div>
+                    <p class="text-white/60 mb-6 leading-relaxed">
+                        Empowering heritage commerce. Connecting master artisans with discerning audiences through ethical business practices and cultural respect.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/60 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-white/60 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-white/60 hover:text-white transition-colors">All Services</a></li>
+                        <li><a href="index.html#cases" class="text-white/60 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#contact" class="text-white/60 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="advertising.html" class="text-white/60 hover:text-white transition-colors">Advertising & Marketing</a></li>
+                        <li><a href="online-advertising.html" class="text-white/60 hover:text-white transition-colors">Online Advertising</a></li>
+                        <li><a href="business-info.html" class="text-white hover:text-white transition-colors">Business Intelligence</a></li>
+                        <li><a href="exhibitions.html" class="text-white/60 hover:text-white transition-colors">Exhibition Organization</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mr-3 mt-1 text-ochre"></i>
+                            <span class="text-white/60">Building D, High-tech Industrial Park, Baoding, China</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-whatsapp mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-3 text-ochre"></i>
+                            <span class="text-white/60">bella@qianguyi.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40">
+                <p>&copy; 2024 TimeMuse. All rights reserved. Preserving cultural heritage through ethical commerce.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8615100288381" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fa fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

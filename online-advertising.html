@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Advertising | TimeMuse - Heritage Commerce Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        ink: '#1A1A1A', // 墨黑 - 主文字色
+                        ochre: '#C17A54', // 赭石红 - 主色
+                        stone: '#5B8A8D', // 石青蓝 - 辅助色
+                        gold: '#D4AF37', // 淡金 - 点缀色
+                        rice: '#F8F5F0', // 宣纸白 - 背景色
+                        cloud: '#E8E4DB', // 云灰 - 次要背景
+                    },
+                    fontFamily: {
+                        brush: ['Ma Shan Zheng', 'cursive'],
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .rice-paper {
+                background-color: #F8F5F0;
+                background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-divider {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #1A1A1A, transparent);
+            }
+            .cloud-pattern {
+                background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 10c-5 0-8 3-10 6-2-3-5-6-10-6-6 0-10 4-10 10s4 10 10 10c1 0 2 0 3-1 2 4 6 7 11 7s9-3 11-7c1 1 2 1 3 1 6 0 10-4 10-10s-4-10-10-10z' fill='%23C17A54' fill-opacity='0.03'/%3E%3C/svg%3E");
+            }
+            .ink-card {
+                background: rgba(255, 255, 255, 0.7);
+                border: 1px solid rgba(26, 26, 26, 0.1);
+                backdrop-filter: blur(10px);
+            }
+            .brush-title {
+                letter-spacing: 0.05em;
+                line-height: 1.2;
+            }
+            .hover-lift {
+                transition: all 0.3s ease;
+            }
+            .hover-lift:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(26, 26, 26, 0.08);
+            }
+        }
+    </style>
+    <!-- 引入毛笔书法字体和优雅衬线字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="font-sans text-ink antialiased rice-paper">
+    <!-- Hero Section -->
+    <section class="pt-20 pb-20 md:pt-28 md:pb-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- 顶部Logo -->
+                <div class="mb-12">
+                    <a href="index.html">
+                        <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-14 mx-auto">
+                    </a>
+                </div>
+                
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Our Services</span>
+                <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-brush brush-title text-ink mb-6">
+                    Online Advertising
+                </h1>
+                
+                <div class="ink-divider w-24 mx-auto mb-6"></div>
+                
+                <p class="text-lg md:text-xl text-ink/70 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Targeted digital campaigns that reach discerning collectors and cultural enthusiasts across major domestic platforms
+                </p>
+                
+                <a href="#contact" class="inline-block bg-ochre hover:bg-ochre/90 text-white px-8 py-3 rounded-sm font-medium text-lg transition-all text-center">
+                    Get a Free Consultation
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Overview -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://picsum.photos/id/180/600/500" alt="Digital Advertising for Heritage Brands" class="rounded-sm shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Overview</span>
+                    <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Reach the Right Audience</h2>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        The market for authentic heritage products is growing rapidly, but reaching the right audience can be challenging. Many potential customers are actively searching for traditional crafts but don't know where to find them.
+                    </p>
+                    <p class="text-lg text-ink/70 mb-6 leading-relaxed">
+                        Our online advertising services are designed specifically for the heritage industry. We understand the unique characteristics of cultural products and how to connect them with consumers who appreciate their value, history, and craftsmanship.
+                    </p>
+                    <p class="text-lg text-ink/70 leading-relaxed">
+                        From search engine marketing to social media advertising, we create targeted campaigns that drive qualified traffic, increase conversions, and build long-term customer relationships for heritage brands and artisans.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Advertising Services -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">What We Offer</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Digital Advertising Solutions</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    Data-driven advertising services tailored to the unique needs of heritage brands and master artisans
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Service 1 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-search text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Search Engine Marketing (SEM)</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Target customers actively searching for heritage products and traditional crafts through strategic search engine advertising campaigns.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Keyword research & strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Search ad campaign management</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Landing page optimization</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Conversion tracking & analysis</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 2 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-thumbs-up text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Social Media Advertising</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Engage with cultural enthusiasts and potential customers on major social media platforms through visually compelling ad campaigns.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Platform-specific ad strategy</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Audience targeting & segmentation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Creative ad design & production</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Campaign performance optimization</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 3 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-picture-o text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Display & Retargeting Campaigns</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Build brand awareness and recapture potential customers who have shown interest in your heritage products.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Contextual display advertising</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Website retargeting campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Dynamic product ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Abandoned cart recovery</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="ink-card rounded-sm p-8 hover-lift">
+                    <div class="w-14 h-14 bg-ochre/10 rounded-full flex items-center justify-center mb-6">
+                        <i class="fa fa-play-circle text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-4 text-ink">Video Storytelling Ads</h3>
+                    <p class="text-ink/70 mb-6 leading-relaxed">
+                        Showcase the beauty and craftsmanship of traditional crafts through engaging video advertising campaigns.
+                    </p>
+                    <ul class="space-y-2 text-ink/60 text-sm">
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Craft process video ads</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Short-form video campaigns</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Artisan story videos</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-check text-ochre mr-2"></i>
+                            <span>Video ad optimization</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Advertising Advantage -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Why Choose Us</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Heritage Advertising Specialists</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    What makes our online advertising services uniquely effective for heritage brands
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Advantage 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-bullseye text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Precision Targeting</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        We know exactly how to identify and target consumers who appreciate and are willing to pay for authentic cultural products
+                    </p>
+                </div>
+                
+                <!-- Advantage 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-handshake-o text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Cultural Sensitivity</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        Our advertising always respects cultural traditions and avoids inappropriate or sensationalized representations of heritage crafts
+                    </p>
+                </div>
+                
+                <!-- Advantage 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fa fa-bar-chart text-ochre text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold mb-3 text-ink">Data-Driven Results</h3>
+                    <p class="text-ink/70 leading-relaxed">
+                        We use advanced analytics to continuously optimize campaigns and ensure maximum return on your advertising investment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advertising Process -->
+    <section class="py-20 md:py-28 rice-paper cloud-pattern">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">How We Work</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Our Advertising Process</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    A systematic approach to creating and managing successful advertising campaigns
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        1
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Research</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Analyze your market, competitors, and target audience to identify opportunities
+                    </p>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        2
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Strategy</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Develop a customized advertising strategy aligned with your business goals
+                    </p>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        3
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Creation</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Design and produce compelling ad creatives that showcase your heritage products
+                    </p>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        4
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Launch</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Launch campaigns across selected platforms and monitor initial performance
+                    </p>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-ochre rounded-full flex items-center justify-center mx-auto mb-4 text-white text-xl font-bold">
+                        5
+                    </div>
+                    <h3 class="text-lg font-serif font-bold mb-3 text-ink">Optimize</h3>
+                    <p class="text-ink/70 text-sm leading-relaxed">
+                        Continuously analyze data and optimize campaigns for better results
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Cases -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="inline-block text-ochre text-sm font-medium mb-4 uppercase tracking-wider">Success Stories</span>
+                <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-serif font-bold text-ink mb-6">Advertising Success Stories</h2>
+                <div class="ink-divider w-20 mx-auto mb-6"></div>
+                <p class="text-lg text-ink/70 max-w-3xl mx-auto">
+                    See how our online advertising campaigns have helped heritage brands grow their businesses
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Case 1 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/628/650/350" alt="Jade Carving Brand SEM Campaign" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Search Marketing</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Traditional Jade Carving E-commerce Growth</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Implemented a comprehensive search engine marketing strategy for a traditional jade carving brand in eastern China. We identified high-intent keywords related to jade craftsmanship and created targeted ad campaigns that drove qualified traffic to their e-commerce store.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">+68% Online Revenue</span>
+                            <span class="text-ink/60">10 Months</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Case 2 - 模糊化国内案例 -->
+                <div class="bg-white rounded-sm overflow-hidden shadow-sm hover-lift border border-ink/10">
+                    <img src="https://picsum.photos/id/42/650/350" alt="Social Media Campaign for Embroidery" class="w-full h-56 object-cover">
+                    <div class="p-8">
+                        <span class="inline-block bg-ochre/10 text-ochre text-xs font-medium px-3 py-1 rounded-sm mb-4">Social Media Ads</span>
+                        <h3 class="text-xl font-serif font-bold mb-4 text-ink">Hand Embroidery Brand Awareness</h3>
+                        <p class="text-ink/70 mb-6 leading-relaxed">
+                            Launched a social media advertising campaign for a hand embroidery brand in southern China. We created visually stunning ads showcasing the intricate embroidery process and targeted audiences interested in traditional art and luxury crafts.
+                        </p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-ochre font-semibold">+120% Brand Followers</span>
+                            <span class="text-ink/60">6 Months</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-20 md:py-28 bg-stone text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-[clamp(2rem,5vw,3.5rem)] font-serif font-bold mb-6">Ready to Grow Your Heritage Business?</h2>
+            <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-12 leading-relaxed">
+                Contact us today for a free consultation and discover how our online advertising services can help you reach more customers
+            </p>
+            
+            <div class="flex flex-col md:flex-row justify-center items-center gap-10">
+                <!-- Phone -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-phone text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Phone</p>
+                        <a href="tel:+8615100288381" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- WhatsApp -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center">
+                        <i class="fa fa-whatsapp text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">WhatsApp</p>
+                        <a href="https://wa.me/8615100288381" target="_blank" class="text-lg font-medium hover:text-ochre transition-colors">+86 15100288381</a>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="flex items-center gap-4 bg-white/10 px-6 py-4 rounded-sm border border-white/20">
+                    <div class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center">
+                        <i class="fa fa-envelope text-white text-xl"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="text-sm text-white/70">Email</p>
+                        <a href="mailto:bella@qianguyi.com" class="text-lg font-medium hover:text-ochre transition-colors">bella@qianguyi.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-ink text-white py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <div class="flex items-center mb-6">
+                        <a href="index.html">
+                            <img src="timemuse.jpg" alt="TimeMuse Logo" class="h-10 mr-3 brightness-200">
+                        </a>
+                    </div>
+                    <p class="text-white/60 mb-6 leading-relaxed">
+                        Empowering heritage commerce. Connecting master artisans with discerning audiences through ethical business practices and cultural respect.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Quick Links</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-white/60 hover:text-white transition-colors">Home</a></li>
+                        <li><a href="index.html#about" class="text-white/60 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="index.html#services" class="text-white/60 hover:text-white transition-colors">All Services</a></li>
+                        <li><a href="index.html#cases" class="text-white/60 hover:text-white transition-colors">Case Studies</a></li>
+                        <li><a href="#contact" class="text-white/60 hover:text-white transition-colors">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Our Services</h4>
+                    <ul class="space-y-3">
+                        <li><a href="advertising.html" class="text-white/60 hover:text-white transition-colors">Advertising & Marketing</a></li>
+                        <li><a href="online-advertising.html" class="text-white hover:text-white transition-colors">Online Advertising</a></li>
+                        <li><a href="business-info.html" class="text-white/60 hover:text-white transition-colors">Business Intelligence</a></li>
+                        <li><a href="exhibitions.html" class="text-white/60 hover:text-white transition-colors">Exhibition Organization</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-serif font-bold mb-6 text-ochre">Contact Us</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i class="fa fa-map-marker mr-3 mt-1 text-ochre"></i>
+                            <span class="text-white/60">Building D, High-tech Industrial Park, Baoding, China</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-whatsapp mr-3 text-ochre"></i>
+                            <span class="text-white/60">+86 15100288381</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-3 text-ochre"></i>
+                            <span class="text-white/60">bella@qianguyi.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40">
+                <p>&copy; 2024 TimeMuse. All rights reserved. Preserving cultural heritage through ethical commerce.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/8615100288381" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:bg-green-600 transition-colors z-50">
+        <i class="fa fa-whatsapp text-xl"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Scroll to target
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 50,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
